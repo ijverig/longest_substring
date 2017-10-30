@@ -19,7 +19,7 @@ describe String do
         end
 
         context "given a string with no unique longest substring" do
-            string = "bagage"
+            string = "banana"
             it "returns the first char of this string" do
                 expect(string.longest_substring).to eql "b"
             end

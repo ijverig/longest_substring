@@ -61,7 +61,7 @@ Take `Voo` as an example string.
 [ … ["o", "o"] … ]
 ```
 
-6. Finally we return it, along with its positions
+6. Finally we find the positions of the substring in the original string
 ```ruby
 substring = "oo"
 positions = [1,3]
