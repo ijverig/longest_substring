@@ -1,8 +1,6 @@
 class String
     # Returns longest substring and its initial and final positions
     def longest_substring
-        return nil if empty?
-
         # generates all substrings with its positions = [substring, initial position, end position]
         substrs = []
         (1..length).each do |size|
