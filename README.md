@@ -30,38 +30,24 @@ Run `bundle install` first.
 
 ## Rationale
 
-It's an exhaustive solution:
-
-Take `Voo` as an example string.
+Take `Loop` as an example string.
 
 1. String is transformed in array
 ```ruby
-`"Voo" => [ "V", "o", "o" ]`
+"Loop" => [ "L", "o", "o", "p" ]
 ```
 
-2. All substrings are generated
+2. Adjacent substrings of same char are generated
 ```ruby
-[ ["V"], ["o"], ["o"], ["V", "o"], ["o", "o"], ["V", "o", "o"] ]
+[ ["L"], ["o", "o"], ["p"] ]
 ```
 
-3. Then we verify all substrings that are of the same char
-```ruby
-[ ["V"], ["o"], ["o"], ["V", "o"], ["o", "o"], ["V", "o", "o"] ]
-    |      |      |        |           |              |
-   true   true   true    false        true          false
-```
-
-4. Then we select substrings of the same char
-```ruby
-[ ["V"], ["o"], ["o"], ["o", "o"] ]
-```
-
-5. Next we select the largest one
+3. Next we select the largest one
 ```ruby
 [ … ["o", "o"] … ]
 ```
 
-6. Finally we return it, along with its positions
+4. Finally we find the positions of the substring in the original string
 ```ruby
 substring = "oo"
 positions = [1,3]
