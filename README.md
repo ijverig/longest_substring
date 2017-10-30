@@ -14,17 +14,17 @@ Run `bundle install` first.
 
 ## Usage
 
-* String#max_substring
+* String#longest_substring
 ```ruby
 # returns largest substring of same chars
-"Pressaaao".max_substring
+"Pressaaao".longest_substring
  => "aaa"
 ```
 
-* String#max_substring_positions
+* String#longest_substring_positions
 ```ruby
 # returns positions of largest substring
-"Pressaaao".max_substring_positions
+"Pressaaao".longest_substring_positions
  => [5,9]
 ```
 

@@ -1,6 +1,6 @@
 class String
     # Returns longest substring and its initial and final positions
-    def longest_substring
+    def longest_substring_attribs
         # generates all substrings with its positions = [substring, initial position, end position]
         substrs = []
         (1..length).each do |size|
@@ -15,14 +15,14 @@ class String
     end
 
     # Returns longest substring or nil if String is empty
-    def max_substring
-        substr, *_ = longest_substring
+    def longest_substring
+        substr, *_ = longest_substring_attribs
         substr
     end
 
     # Returns longest substring positions or [nil,nil] if String is empty
-    def max_substring_positions
-        _, initial, final = longest_substring
+    def longest_substring_positions
+        _, initial, final = longest_substring_attribs
         [initial, final]
     end
 end
