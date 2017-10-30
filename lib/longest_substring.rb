@@ -19,4 +19,9 @@ class String
         substr, *_ = longest_substring
         substr
     end
+
+    def max_substring_positions
+        _, initial, final = longest_substring
+        [initial, final]
+    end
 end
